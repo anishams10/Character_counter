@@ -3,7 +3,7 @@ A simple **Character Counter** project built using HTML, CSS, and JavaScript.
 
 ## Live Demo
 
-[View Character Counter](https://anishams10.github.io/character_counter/)
+[View Character Counter](https://anishams10.github.io/Character_counter/)
 
 ## Features
 
