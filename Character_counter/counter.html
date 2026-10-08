@@ -43,18 +43,16 @@
         {
             const enteredChar = text.value.length;
             char_counter.textContent = `${enteredChar}`; 
-            console.log(char_counter)
 
             if(enteredChar == maxChar)
             {
                 text.classList.add("errBorder");
-                errMessage.style.display = "block"
+                errMessage.style.display = "block";
             }
             else
             {
                 text.classList.remove("errBorder")
-                errMessage.style.display = "none"
-
+                errMessage.style.display = "none";
             }
         }
     </script>
