@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Char_counter</title>
+</head>
+<body>
+    <style>
+        div{
+            margin: 10% 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .text{
+            width: 100%;
+            height: 150px;
+            border: 1px solid green;
+            padding: 8px;
+        }
+        .text.errBorder{
+            outline: 2px solid red !important;
+        }
+        p{
+            text-align: right;
+        }
+    </style>
+
+    <div>
+        <h1>Message</h1>
+        <textarea name="" class="text" maxlength="200" onkeyup="counter()" placeholder="Enter your text here"></textarea>
+        <p><span id="char_counter">0</span> /200 characters. <span style="color: red; display: none;" id="errMessage">(*limit reached)</span></p>
+    </div>
+
+    <script>
+        let text = document.querySelector(".text");
+        let errMessage = document.getElementById("errMessage")
+        const char_counter = document.getElementById("char_counter");
+        const maxChar = 200;
+
+        function counter()
+        {
+            const enteredChar = text.value.length;
+            char_counter.textContent = `${enteredChar}`; 
+
+            if(enteredChar == maxChar)
+            {
+                text.classList.add("errBorder");
+                errMessage.style.display = "block";
+            }
+            else
+            {
+                text.classList.remove("errBorder")
+                errMessage.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
